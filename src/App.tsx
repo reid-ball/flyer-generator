@@ -1,9 +1,9 @@
 import { useState, useCallback } from 'react';
-import { FlyerConfig, DEFAULT_CONFIG, FLYER_STYLES, FlyerStyle } from './types';
+import { FlyerConfig, DEFAULT_CONFIG, FLYER_STYLES } from './types';
 import { FlyerEditor } from './components/FlyerEditor';
 import { FlyerPreview } from './components/FlyerPreview';
 
-export function App() {
+export default function App() {
   const [config, setConfig] = useState<FlyerConfig>(DEFAULT_CONFIG);
   const [activeTab, setActiveTab] = useState<'edit' | 'preview'>('edit');
 

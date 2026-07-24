@@ -1,11 +1,11 @@
-import { FlyerConfig, FlyerStyle } from '../types';
+import { FlyerConfig } from '../types';
 
 interface FlyerPreviewProps {
   config: FlyerConfig;
   selectedStyle: { name: string; description: string; bg: string; accent: string };
 }
 
-export function FlyerPreview({ config, selectedStyle }: FlyerPreviewProps) {
+export function FlyerPreview({ config, selectedStyle: _style }: FlyerPreviewProps) {
   return (
     <div style={{
       flex: 1,
@@ -83,7 +83,7 @@ export function FlyerPreview({ config, selectedStyle }: FlyerPreviewProps) {
               gap: '15px',
               marginBottom: '20px',
             }}>
-              {config.images.slice(0, 4).map((img, i) => (
+              {config.images.slice(0, 4).map((img) => (
                 <div
                   key={img.id}
                   style={{
